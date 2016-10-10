@@ -55,7 +55,6 @@ describe 'elasticsearch::elasticsearch_user' do
 
     describe file('/usr/share/elasticsearch') do
       it { should be_directory }
-      it { should be_owned_by 'esuser' }
     end
 
     describe file('/var/log/elasticsearch') do
@@ -65,7 +64,6 @@ describe 'elasticsearch::elasticsearch_user' do
 
     describe file('/etc/elasticsearch') do
       it { should be_directory }
-      it { should be_owned_by 'esuser' }
     end
 
     describe port(test_settings['port_a']) do
